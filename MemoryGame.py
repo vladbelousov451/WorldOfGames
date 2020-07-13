@@ -26,9 +26,9 @@ def is_list_equal( Generated_list , Alrted_list):
 
 def play( difficulty):
     print("Welcome to the Memory Game ")
-    Generated_list = self.generate_sequence(difficulty)
-    Alrted_list = self.get_list_from_user()
-    Answer = self.is_list_equal(Generated_list , Alrted_list)
+    Generated_list = generate_sequence(difficulty)
+    Alrted_list = get_list_from_user()
+    Answer = is_list_equal(Generated_list , Alrted_list)
     return Answer
 
 

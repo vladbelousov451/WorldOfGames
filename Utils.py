@@ -8,5 +8,4 @@ BAD_RETURN_CODE = "404"
 
 
 def Screen_cleaner():
-    os.system('cls')
-
+    os.system('clear')
