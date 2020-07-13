@@ -10,18 +10,30 @@ app = Flask(__name__)
 def score_server():
     with open(scoreFile, "r") as File:
         Score = File.read()
-        HTML = (f""" <html>
+        if Score == '':
+            ERROR = Utils.BAD_RETURN_CODE
+            HTML = (f"""
+            <html>
 <head>
 <title>Scores Game</title>
 </head>
 <body>
-<h1>The score is <div id="score">{Score}</div></h1>
+<body>
+<h1><div id="score" style="color:red">{ERROR}</div></h1>
 </body>
-</html> """)
+</html>
+            
+            """)
+        else:
+            HTML = (f""" <html>
+    <head>
+    <title>Scores Game</title>
+    </head>
+    <body>
+    <h1>The score is <div id="score">{Score}</div></h1>
+    </body>
+    </html> """)
         return HTML
 
-app.run()
-
-
-
-app.run()
+def score_servers():
+    app.run()

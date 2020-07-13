@@ -53,7 +53,7 @@ def load_game():
                         Utils.Screen_cleaner()
                         load_game()
                 if GameNumber ==4:
-                    MainScores.score_server()
+                    MainScores.score_servers()
 
 
             else:
