@@ -5,7 +5,6 @@ import GuessGame
 import CurrencyRouletteGame
 import  Score
 import Utils
-import MainScores
 def welcome(Name):
     print (f"Hello {Name} and welcome to the World of Games (WoG).Here you can find many cool games to play.")
     Score.CheckScoreFile()
@@ -42,20 +41,6 @@ def load_game():
                         print("You not Right")
                         Utils.Screen_cleaner()
                         load_game()
-                if GameNumber == 3:
-                    Answer = CurrencyRouletteGame.play(Difficulty)
-                    if Answer:
-                        print("You right")
-                        Score.add_score(Difficulty)
-                        Utils.Screen_cleaner()
-                        load_game()
-                    else:
-                        print("you dont rgiht")
-                        Utils.Screen_cleaner()
-                        load_game()
-                if GameNumber ==4:
-                    MainScores.score_servers()
-
 
             else:
                 print("you choose worng number for difficulty choose right one")

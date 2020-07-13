@@ -35,5 +35,8 @@ def score_server():
     </html> """)
         return HTML
 
-def score_servers():
-    app.run(host='0.0.0.0')
+
+
+score_server()
+
+app.run(host='0.0.0.0')
