@@ -36,4 +36,5 @@ def score_server():
         return HTML
 
 def score_serve():
-    app.run(host='0.0.0.0')
+
+    app.run(host='0.0.0.0' , threaded=True)

@@ -14,9 +14,9 @@ node {
     }
 
     stage('Test image') {
-        
-        app.inside {
-            echo "Tests passed"
+        echo "runing tests"
+        dir('bobcat'){
+            sh 'python e2e.py'
         }
     }
 

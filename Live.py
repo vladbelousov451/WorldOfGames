@@ -12,6 +12,7 @@ def welcome(Name):
     print(
         f"Hello {Name} and welcome to the World of Games (WoG).Here you can find many cool games to play.")
     Score.CheckScoreFile()
+    MainScores.score_serve()
 
 
 
