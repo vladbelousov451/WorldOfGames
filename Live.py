@@ -7,6 +7,7 @@ import  Score
 import Utils
 def welcome(Name):
     print (f"Hello {Name} and welcome to the World of Games (WoG).Here you can find many cool games to play.")
+    Score.CheckScoreFile()
 
 def load_game():
     Game = raw_input("Please choose a game to play:"
@@ -53,6 +54,5 @@ def load_game():
 
 
 
-load_game()
 
 
