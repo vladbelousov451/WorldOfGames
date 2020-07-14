@@ -5,7 +5,7 @@ options = Options()
 options.headless = True
 options.add_argument('--no-sandbox')
 
-CHROMEDRIVER_PATH = './chromedriver 2'
+CHROMEDRIVER_PATH = './chromedriver 3'
 driver = webdriver.Chrome(CHROMEDRIVER_PATH, chrome_options=options)
 
 
