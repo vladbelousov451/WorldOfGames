@@ -15,7 +15,7 @@ node {
 
     stage('Test image') {
         echo "runing tests"
-        dir('bobcat'){
+        dir('test'){
             sh 'python e2e.py'
         }
     }
