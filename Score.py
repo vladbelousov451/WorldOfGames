@@ -6,7 +6,6 @@ ScoreFile = Utils.ScoreFile
 def add_score(Diffuculty , ScoreFile=ScoreFile):
     with open(ScoreFile , "r") as ReadFile:
         Number = ReadFile.read()
-        print(type(Number))
         TemplatePoints = (Diffuculty * 3) + 5
         Number2 = int(int(Number) + TemplatePoints)
         Number3 = str(Number2)

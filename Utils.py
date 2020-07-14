@@ -2,7 +2,7 @@
 from os import system, name
 import os
 
-ScoreFile = "/tmp/Scores.text"
+ScoreFile = "./Scores.text"
 SCORES_FILE_NAME = "Scores.txt"
 BAD_RETURN_CODE = "404"
 

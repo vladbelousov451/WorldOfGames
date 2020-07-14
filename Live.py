@@ -3,24 +3,36 @@ from pip._vendor.distlib.compat import raw_input
 import MemoryGame
 import GuessGame
 import CurrencyRouletteGame
-import  Score
+import Score
 import Utils
+import MainScores
+
+
 def welcome(Name):
-    print (f"Hello {Name} and welcome to the World of Games (WoG).Here you can find many cool games to play.")
+    print(
+        f"Hello {Name} and welcome to the World of Games (WoG).Here you can find many cool games to play.")
     Score.CheckScoreFile()
+
+
 
 def load_game():
     Game = raw_input("Please choose a game to play:"
-                         "1. Memory Game - a sequence of numbers will appear for 1 second and you have toguess it back"
-                         "2. Guess Game - guess a number and see if you chose like the computer"
-                         "3. Currency Roulette - try and guess the value of a random amount of USD in ILS, 4 to exit "
+                     "1. Memory Game - a sequence of numbers will appear for 1 second and you have toguess it back"
+                     "2. Guess Game - guess a number and see if you chose like the computer"
+                     "3. Currency Roulette - try and guess the value of a random amount of USD in ILS, "
+                     "4. to show Score "
 
-                            )
+                     )
     if Game != '':
         GameNumber = int(Game)
-        if GameNumber >= 1 and GameNumber <=4:
-            Difficulty = int(raw_input("Please choose game difficulty from 1 to 5:"))
-            if Difficulty >=1 and Difficulty <= 5:
+        if GameNumber >= 1 and GameNumber <= 4:
+            if GameNumber ==4:
+                MainScores.score_serve()
+            else:
+                pass
+            Difficulty = int(
+                raw_input("Please choose game difficulty from 1 to 5:"))
+            if Difficulty >= 1 and Difficulty <= 5:
                 if GameNumber == 1:
                     Answer = MemoryGame.play(Difficulty)
                     if Answer:
@@ -41,6 +53,16 @@ def load_game():
                         print("You not Right")
                         Utils.Screen_cleaner()
                         load_game()
+                if GameNumber == 3:
+                    Answer = CurrencyRouletteGame.play(Difficulty)
+                    if Answer:
+                        print("you right")
+                        Score.add_score(Difficulty)
+                        Utils.Screen_cleaner()
+                        load_game()
+                    else:
+                        Utils.Screen_cleaner()
+                        load_game()
 
             else:
                 print("you choose worng number for difficulty choose right one")
@@ -51,8 +73,3 @@ def load_game():
     else:
         print("print Any Number")
         load_game()
-
-
-
-
-
