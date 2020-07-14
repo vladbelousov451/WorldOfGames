@@ -1,10 +1,18 @@
-import selenium
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+options = Options()
+options.headless = True
+CHROMEDRIVER_PATH = './chromedriver 2'
+driver = webdriver.Chrome(CHROMEDRIVER_PATH, chrome_options=options)
+
+
 def test_scores_service():
-    driver = webdriver.ChromeDriver()
+    driver = webdriver.ChromeDriver(CHROMEDRIVER_PATH, chrome_options=options)
     driver.get("App Url")
     assert "python" in driver.title
     elem = driver.find_element_by_id("Score")
-    if elem >= 0 and elem>= 1000:
+    if elem >= 0 and elem >= 1000:
         return True
     else:
         return False
@@ -17,4 +25,3 @@ def main_function():
         return 0
     else:
         return -1
-
