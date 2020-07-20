@@ -10,6 +10,7 @@ def generate_sequence(difficulty):
         List_number.append(Rand_number)
     print(List_number)
     time.sleep(0.7)
+    Utils.Screen_cleaner()
     return  List_number
 
 def get_list_from_user(difficulty):
@@ -24,7 +25,6 @@ def is_list_equal( Generated_list , Alrted_list):
     if(Generated_list == Alrted_list):
         return True
     else:
-        print("wrong")
         return False
 
 

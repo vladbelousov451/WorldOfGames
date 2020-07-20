@@ -30,10 +30,13 @@ def load_game():
                     Answer = MemoryGame.play(Difficulty)
                     if Answer:
                         Score.add_score(Difficulty)
+                        print("You were right")
                         Utils.Screen_cleaner()
                         load_game()
                     else:
+                        print("You were wrong")
                         Utils.Screen_cleaner()
+
                         load_game()
                 if GameNumber == 2:
                     Answer = GuessGame.play(Difficulty)
