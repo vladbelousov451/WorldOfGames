@@ -1,26 +1,18 @@
 <!DOCTYPE html>
-    <html>
-        <meta charset="UTF-8">
-        <head>
-            <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-            <title>Scores Game</title>
-        </head>
-        <body>
-        <section>
-  <div class="button" is="wtc-barfy-stars" data-config='{"numParticles": 50, "gravity": 0.3}'>Your Score is  &nbsp; &nbsp; {{ Scoreingame  }}  </div>
-
-<!--   <div class="button" is="wtc-barfy-stars" data-config='{"numParticles": 20, "gravity\
-": 0.2, "triggerAtMouse": true}'>Hover me, baby.</div> -->
-
-<!--     <div class="button" is="wtc-barfy-stars" data-config='{"scaleInitial": 1, "momentum" : 10, "gravity": 0, "friction": 0.9999999, "numParticles": 100}'>Hover me, baby.</div> -->
-
-  <!--   <div class="button" is="wtc-barfy-stars" data-config='{"scaleInitial": 1, "momentum" : 10, "gravity": 0.4, "friction": 0.9999999, "numParticles": 100}'>Hover me, baby.</div> -->
-
-  <!--   <div class="button" is="wtc-barfy-stars" data-config='{"scaleInitial": 1, "momentum" : 7, "numParticles": 100, "extraStyles" : ".BSParticle::after { background: url(\"https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/nauseated-face_1f922%20(1).png\") no-repeat center center; background-size: contain; }.BSParticle--2::after { background-image: url(\"https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/leafy-green_1f96c.png\");}.BSParticle--3::after { background-image: url(\"https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/trex_1f996.png\");}.BSParticle--4::after { background-image: url(\"https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/dragon-face_1f432.png\");}.BSParticle--5::after { background-image: url(\"https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/crocodile_1f40a.png\");}"}'>Hover me, baby.</div> -->
-</section>
-        </body>
-    </html>
-
-
-
-
+<html>
+  <meta charset="UTF-8" />
+  <head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+  </head>
+  <body>
+    <div class="svg-wrapper">
+      <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+        <rect class="shape" height="60" width="320" />
+      </svg>
+      <div class="text">{{Scoreingame}}</div>
+    </div>
+  </body>
+</html>
