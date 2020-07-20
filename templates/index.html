@@ -3,14 +3,17 @@
         <meta charset="UTF-8">
         <head>
             <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-            <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.united.css') }}">
+            <script src="{{ url_for('static', filename='js/main.js') }}"></script>
             <title>Scores Game</title>
         </head>
         <body>
-        <div class="card">
-            <div class="card-body , contianer">
-                <h1>Your Score is  &nbsp;&nbsp; {{Scoreingame}} </h1>
+        <div id="world"></div>
+            <div id="instructions">Press and drag to make wind<br/><span class="lightInstructions">the lion will surely appreciate</span>
             </div>
+
+        <div id="credits">
+         <p>Prints on <a class="society6" href="https://society6.com/yakudoo/"  target="blank">society6</a> | <a href="https://codepen.io/Yakudoo/"  target="blank">my other codepens</a> | <a href="https://www.epic.net" target="blank">epic.net</a></p>
+        </div>
         </div>
 
         </body>
