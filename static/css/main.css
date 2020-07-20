@@ -3,12 +3,14 @@ body {
     height: 100%;
 }
 
-.container {
+.contianer {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color:green; !important
+    color:green;
+    margin: 0 auto;
+
 }
 
 
