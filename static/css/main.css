@@ -1,45 +1,24 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
-#world {
-  background: #ebe5e7;
-  position:absolute;
-  width:100%;
-  height:100%;
-  overflow:hidden;
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+body {
+  margin: 0;
 }
-#instructions{
-  position:absolute;
-  width:100%;
-  top:50%;
-  margin: auto;
-  margin-top:120px;
-  font-family:'Open Sans', sans-serif;
-  color:#653f4c;
-  font-size:.9em;
-  text-transform: uppercase;
-  text-align : center;
-  user-select: none;
-}
-.lightInstructions {
-  color:#993f4c;
-  font-size:.8em;
+section {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
 }
 
-#credits{
-  position:absolute;
-  width:100%;
-  margin: auto;
-  bottom:0;
-  margin-bottom:20px;
-  font-family:'Open Sans', sans-serif;
-  color:#b297a2;
-  font-size:0.7em;
-  text-transform: uppercase;
-  text-align : center;
+.button {
+  color: #59C3C3;
+  cursor: pointer;
+  font-family: "Abril Fatface", sans;
+  font-size: 50px;
+  letter-spacing: -1px;
 }
-#credits a {
-  color:#b297a2;
-}
-
-#credits .society6 {
-  color:#993f4c;
+.button:hover {
+  color: #E07A5F;
 }
