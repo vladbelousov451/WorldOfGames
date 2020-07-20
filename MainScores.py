@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, session, url_for, redirect, render_template, request, abort, flash
 import Utils
 
 scoreFile = Utils.ScoreFile
@@ -18,32 +18,9 @@ log.setLevel(logging.ERROR)
 def score_server():
     with open(scoreFile, "r") as File:
         Score = File.read()
-        if Score == '':
-            ERROR = Utils.BAD_RETURN_CODE
-            HTML = (f"""
-            <html>
-<head>
-<title>Scores Game</title>
-</head>
-<body>
-<body>
-<h1><div id="score" style="color:red">{ERROR}</div></h1>
-</body>
-</html>
-            
-            """)
-        else:
-            HTML = (f""" <html>
-    <meta charset="UTF-8">
-    <head>
-    <link rel="stylesheet" type= "text/css" href="style.css">
-    <title>Scores Game</title>
-    </head>
-    <body>
-    <h1 class="container">The score is <div id="score">{Score}</div></h1>
-    </body>
-    </html> """)
-        return HTML
+        File.close()
+    return render_template("index.html" , Scoreingame=Score )
+
 
 def score_serve():
 
