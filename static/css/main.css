@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
 
 body {
   margin: 0;
@@ -13,12 +13,12 @@ section {
 }
 
 .button {
-  color: #59C3C3;
+  color: #ce33ff;
   cursor: pointer;
   font-family: "Abril Fatface", sans;
   font-size: 50px;
   letter-spacing: -1px;
 }
 .button:hover {
-  color: #E07A5F;
+  color: #59c3c3;
 }
