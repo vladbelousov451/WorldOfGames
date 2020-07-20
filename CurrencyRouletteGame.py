@@ -19,7 +19,6 @@ rand_number = random.randint(1,100)
 
 
 def get_money_interval(ShekelCurrncy , Difficulty):
-    print(rand_number)
     afterExchange = int(rand_number*ShekelCurrncy)
     guessFromUser = (afterExchange - (5 -Difficulty), afterExchange + (5-Difficulty))
     return guessFromUser

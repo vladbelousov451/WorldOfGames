@@ -34,11 +34,13 @@ def score_server():
             """)
         else:
             HTML = (f""" <html>
+    <meta charset="UTF-8">
     <head>
+    <link rel="stylesheet" type= "text/css" href="style.css">
     <title>Scores Game</title>
     </head>
     <body>
-    <h1>The score is <div id="score">{Score}</div></h1>
+    <h1 class="container">The score is <div id="score">{Score}</div></h1>
     </body>
     </html> """)
         return HTML

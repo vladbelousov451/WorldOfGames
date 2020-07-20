@@ -6,7 +6,6 @@ import random
 
 def generate_number(difficulty):
     Secret_number = random.randint(1 , difficulty)
-    print(Secret_number)
     return Secret_number
 
 def get_guess_from_user(difficulty):
