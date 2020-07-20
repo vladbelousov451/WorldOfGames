@@ -1,18 +1,21 @@
 
 import random
-
+import time
+import Utils
 
 def generate_sequence(difficulty):
     List_number = []
     for x in range(difficulty):
         Rand_number = random.randint(1 , 101 )
         List_number.append(Rand_number)
+    print(List_number)
+    time.sleep(0.7)
     return  List_number
 
 def get_list_from_user(difficulty):
     List_number = []
     for x in range(difficulty):
-        Alerted_number = input("Please Print the number you see below")
+        Alerted_number = input("Please Print the number you see below:  ")
         List_number.append(Alerted_number)
     return  List_number
 
@@ -21,6 +24,7 @@ def is_list_equal( Generated_list , Alrted_list):
     if(Generated_list == Alrted_list):
         return True
     else:
+        print("wrong")
         return False
 
 

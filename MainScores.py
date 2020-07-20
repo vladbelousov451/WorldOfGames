@@ -6,6 +6,14 @@ scoreFile = Utils.ScoreFile
 app = Flask(__name__)
 
 
+
+import logging
+log = logging.getLogger('werkzeug')
+log.setLevel(logging.ERROR)
+
+
+
+
 @app.route('/')
 def score_server():
     with open(scoreFile, "r") as File:
@@ -37,4 +45,4 @@ def score_server():
 
 def score_serve():
 
-    app.run(host='0.0.0.0' , threaded=True)
+    app.run(host='0.0.0.0' )

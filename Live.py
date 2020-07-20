@@ -7,13 +7,10 @@ import Score
 import Utils
 import MainScores
 
-
 def welcome(Name):
     print(
         f"Hello {Name} and welcome to the World of Games (WoG).Here you can find many cool games to play.")
     Score.CheckScoreFile()
-    MainScores.score_serve()
-
 
 
 def load_game():
@@ -21,16 +18,11 @@ def load_game():
                      "1. Memory Game - a sequence of numbers will appear for 1 second and you have toguess it back"
                      "2. Guess Game - guess a number and see if you chose like the computer"
                      "3. Currency Roulette - try and guess the value of a random amount of USD in ILS, "
-                     "4. to show Score "
 
                      )
     if Game != '':
         GameNumber = int(Game)
-        if GameNumber >= 1 and GameNumber <= 4:
-            if GameNumber ==4:
-                MainScores.score_serve()
-            else:
-                pass
+        if GameNumber >= 1 and GameNumber <= 3:
             Difficulty = int(
                 raw_input("Please choose game difficulty from 1 to 5:"))
             if Difficulty >= 1 and Difficulty <= 5:
