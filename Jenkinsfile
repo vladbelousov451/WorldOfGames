@@ -14,10 +14,8 @@ node {
     }
 
     stage('Test image') {
-        echo "Testing Image"
-        sh "docker run -p 5000:5000 vladibelousov54/worldofgame"
-        dir('test'){
-            sh 'python e2e.py'
+        steps{
+            build 'World-of-games-test'
         }
     }
 
@@ -32,4 +30,10 @@ node {
                 echo "Trying to Push Docker Build to DockerHub"
     }
     
+}
+
+pipeline {
+    agent{
+        docker{  }
+    }
 }
