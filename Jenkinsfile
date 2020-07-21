@@ -14,7 +14,11 @@ node {
     }
 
     stage('Test image') {
-        build 'World-of-games-test'
+        echo "Testing Image"
+        sh "docker run - 5000:5000 vladibelousov54/worldofgame"
+        dir('test'){
+            sh 'python e2e.py'
+        }
     }
 
     stage('Push image') {
@@ -29,3 +33,4 @@ node {
     }
     
 }
+
