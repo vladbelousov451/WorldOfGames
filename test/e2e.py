@@ -15,8 +15,11 @@ def test_scores_service():
     elem = driver.find_element_by_id("Score").get_attribute("value")
     print(elem)
     if elem >= 0 and elem >= 1000:
+        print("true")
         return True
+        
     else:
+        print("false")
         return False
     driver.close()
 
