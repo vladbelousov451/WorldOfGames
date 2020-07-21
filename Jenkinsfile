@@ -31,9 +31,3 @@ node {
     }
     
 }
-
-pipeline {
-    agent{
-        docker{  }
-    }
-}
