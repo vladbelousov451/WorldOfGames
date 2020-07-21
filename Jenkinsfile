@@ -14,9 +14,7 @@ node {
     }
 
     stage('Test image') {
-        steps{
-            build 'World-of-games-test'
-        }
+        build 'World-of-games-test'
     }
 
     stage('Push image') {
