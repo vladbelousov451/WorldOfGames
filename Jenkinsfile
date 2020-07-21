@@ -15,6 +15,7 @@ node {
 
     stage('Test image') {
         echo "runing tests"
+        sh docker run -p 5000:5000 vladibelousov54/worldofgame
         dir('test'){
             sh 'python e2e.py'
         }
