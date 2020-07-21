@@ -1,7 +1,7 @@
 FROM python:3
 
 
-COPY ./* /
+COPY ./ /
 
 
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
