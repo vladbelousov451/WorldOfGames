@@ -20,7 +20,6 @@ node {
             sh 'python e2e.py'
         }
     }
-
     stage('Push image') {
         /* 
 			You would need to first register with DockerHub before you can push images to your account

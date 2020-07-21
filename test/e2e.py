@@ -10,7 +10,7 @@ driver = webdriver.Chrome(CHROMEDRIVER_PATH, chrome_options=options)
 
 
 def test_scores_service():
-    driver = webdriver.ChromeDriver(CHROMEDRIVER_PATH, chrome_options=options)
+    driver = webdriver.Chrome(CHROMEDRIVER_PATH, chrome_options=options)
     driver.get("http://localhost:5000")
     elem = driver.find_element_by_id("Score")
     if elem >= 0 and elem >= 1000:
