@@ -15,7 +15,7 @@ node {
 
     stage('Test image') {
         echo "Testing Image"
-        sh "docker run -p 5000:5000 vladibelousov54/worldofgame"
+        sh  "docker run -d -p 5000:5000 vladibelousov54/worldofgame"
         dir('test'){
             sh 'python e2e.py'
         }
