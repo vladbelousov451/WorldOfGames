@@ -16,9 +16,11 @@ node {
     stage('Test image') {
         echo "Testing Image"
         sh  "docker run -d -p 5000:5000 --name my_app vladibelousov54/worldofgame"
-        sh "pwd"
-        dir('test'){
-            sh 'python e2e.py'
+        docker.image('ruby:2.3.1').inside{
+            stage("run e2e.py"){
+                sh "python /test/e2e.py"
+
+            }
         }
     }
     stage('kill image'){
