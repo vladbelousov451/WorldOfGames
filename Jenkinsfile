@@ -26,8 +26,10 @@ node {
             sh "python e2e.py"
         }
     }
-    stage('kill image'){
-        sh "docker kill my_app"
+    stage('Clean things'){
+        sh "docker kill my_app | docker rm my_app"
+        sh "yum remove google-chrome -y"
+
     }
     stage('Push image') {
         /* 

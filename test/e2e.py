@@ -24,9 +24,9 @@ def test_scores_service():
 def main():
     bool = test_scores_service()
     if bool:
-        return 0
+        return "0"
     else:
-        return -1
+        return "-1"
 
 
 if __name__ == "__main__":
