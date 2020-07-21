@@ -27,8 +27,9 @@ node {
         }
     }
     stage('Clean things'){
-        sh "docker kill my_app | docker rm my_app"
+        sh "docker kill my_app"
         sh "yum remove google-chrome -y"
+        sh "docker rm my_app"
 
     }
     stage('Push image') {
