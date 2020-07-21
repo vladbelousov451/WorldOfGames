@@ -15,10 +15,13 @@ node {
 
     stage('Test image') {
         echo "Testing Image"
-        sh  "docker run -d -p 5000:5000 vladibelousov54/worldofgame"
+        sh  "docker run -d -p 5000:5000 --name my_app vladibelousov54/worldofgame"
         dir('test'){
             sh 'python e2e.py'
         }
+    }
+    stage('kill image'){
+        sh "docker kill my_app"
     }
     stage('Push image') {
         /* 
