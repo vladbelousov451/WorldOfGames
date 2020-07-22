@@ -22,8 +22,10 @@ node {
     stage('Test image') {
         echo "Testing Image"
         sh  "docker run -d -p 5000:5000 --name my_app vladibelousov54/worldofgame"
-        def answer = "python /test/e2e.py"
-        sh "echo ${answer}"
+        dir('test'){
+            def answerr = "python e2e.py"
+            sh "echo vlad"
+            sh "echo ${answerr}"
         }
     }
     stage('Clean things'){
@@ -43,5 +45,5 @@ node {
                 echo "Trying to Push Docker Build to DockerHub"
     }
     
-
+}
 
