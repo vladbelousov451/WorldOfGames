@@ -22,8 +22,8 @@ node {
     stage('Test image') {
         echo "Testing Image"
         sh  "docker run -d -p 5000:5000 --name my_app vladibelousov54/worldofgame"
-        dir('test'){
-            sh "python e2e.py"
+        def answer = "python /test/e2e.py"
+        sh "echo ${answer}"
         }
     }
     stage('Clean things'){
