@@ -1,4 +1,5 @@
-# Color LS
+# Devops Experts Lessons - World-Of-Games Game
 
-[![forthebadge](http://forthebadge.com/images/badges/made-with-ruby.svg)](http://forthebadge.com)
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
+
+This Repo is designed for build the World-of-Games Game
