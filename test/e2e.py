@@ -25,7 +25,7 @@ def test_scores_service():
         driver.close()
     except:
         print "test failed"
-        break
+        return False
 
 
 def main():
