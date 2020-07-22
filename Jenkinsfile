@@ -21,13 +21,9 @@ node {
 
     stage('Test image') {
         echo "Testing Image"
-        sh  "docker run -d -p 5000:5000 --name my_app vladibelousov54/worldofgame"
+        sh  "docker run -d -p 400:5000 --name my_app vladibelousov54/worldofgame"
         dir('test'){
             answerr = "python e2e.py"
-            if !answerr{
-                currentBuild.result = 'ABORTED'
-                 error('Ci Canceled')
-            }
         }
     }
     stage('Clean things'){
