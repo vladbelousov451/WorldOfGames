@@ -23,9 +23,11 @@ node {
         echo "Testing Image"
         sh  "docker run -d -p 5000:5000 --name my_app vladibelousov54/worldofgame"
         dir('test'){
-            def answerr = "python e2e.py"
-            sh "echo vlad"
-            sh "echo ${answerr}"
+            answerr = "python e2e.py"
+            if !answerr{
+                currentBuild.result = 'ABORTED'
+                 error('Ci Canceled')
+            }
         }
     }
     stage('Clean things'){
