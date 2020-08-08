@@ -24,7 +24,7 @@ node {
         sh  "docker run -d -p 400:400 --name my_app vladibelousov54/worldofgame"
         dir('test'){
 		echo "running python"
-        	answer =  python e2e.py
+        	answer =  python "e2e.py"
 		
         }
     }
