@@ -15,7 +15,7 @@ node {
     stage('reqired things'){
         sh "chmod 777 ./test/chromedriver"
 	sh "wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
-        sh "yum install google-chrome-stable_current_x86_64.rpm -y"
+        sh "sudo yum install google-chrome-stable_current_x86_64.rpm -y"
 
     }
 
