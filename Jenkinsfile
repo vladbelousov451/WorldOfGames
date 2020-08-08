@@ -25,7 +25,10 @@ node {
         dir('test'){
 		echo "running python"
         	answer = sh 'python e2e.py'
-		echo 'the answer is ${answer)'
+		echo ${answer}
+		print ${answer}
+		println ${answer}
+		println "${answer}"
 		
         }
     }
