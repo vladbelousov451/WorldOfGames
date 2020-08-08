@@ -23,7 +23,8 @@ node {
         echo "Testing Image"
         sh  "docker run -d -p 400:400 --name my_app vladibelousov54/worldofgame"
         dir('test'){
-          sh "python e2e.py"
+        answer =   sh "python e2e.py"
+	echo($answer)
         }
     }
     stage('Clean things'){
