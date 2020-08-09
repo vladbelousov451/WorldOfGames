@@ -28,7 +28,7 @@ node {
 		echo ANSWER
 		
         }
-	    echo ${ANSWER}
+	    echo ANSWER
     }
     stage('Clean things'){
         sh "docker kill my_app"
