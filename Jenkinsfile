@@ -21,14 +21,18 @@ node {
 
     stage('Test image') {
         echo "Testing Image"
-        sh  "docker run -d -p 400:400 --name my_app vladibelousov54/worldofgame"
+       // sh  "docker run -d -p 400:400 --name my_app vladibelousov54/worldofgame"
         dir('test'){
 		echo "running python"
 		//ANSWER  = sh label: 'running test',returnStdout: true , script: 'python e2e.py'
-		ANSWER = sh(returnStdout: true , script: 'python e2e.py')
-		echo ANSWER	
-        }
-
+		ANSWER = sh(returnStdout: true , script: 'python e2e.py').trim()
+		if (ANSWER == 'test failed') {	
+			echo '[FAILURE] Failed to build'
+            		currentBuild.result = 'FAILURE'
+		} else {
+		    echo "Test passed"
+		}
+ 	 }
     }
     stage('Clean things'){
         sh "docker kill my_app"
