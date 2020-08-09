@@ -28,6 +28,7 @@ node {
 		if (ANSWER == 'test failed') {	
 			echo '[FAILURE] Failed to build'
             		currentBuild.result = 'FAILURE'
+			currentBuild.result = 'ABORTED'
 		} else {
 		    echo "Test passed"
 		}
