@@ -24,9 +24,11 @@ node {
         sh  "docker run -d -p 400:400 --name my_app vladibelousov54/worldofgame"
         dir('test'){
 		echo "running python"
-        	answer = sh 'python e2e.py'
+        	ANSWER  = sh 'python e2e.py'
+		echo ${ANSWER}
 		
         }
+	    echo ${ANSWER}
     }
     stage('Clean things'){
         sh "docker kill my_app"
