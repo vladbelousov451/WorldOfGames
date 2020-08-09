@@ -24,7 +24,7 @@ node {
         sh  "docker run -d -p 400:400 --name my_app vladibelousov54/worldofgame"
         dir('test'){
 		echo "running python"
-        	ANSWER  = sh label: 'running test',returnStdout: true , script: 'python e2e.py'
+        	ANSWER  = sh label: '', returnStdout: true, script: 'sh "python e2e.py"'
 		echo ANSWER
 		
 		
