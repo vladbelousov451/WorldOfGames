@@ -25,7 +25,7 @@ node {
         dir('test'){
 		echo "running python"
         	ANSWER  = sh "echo testfailed"
-		echo "${ANSWER}"
+		echo ANSWER
 		
         }
 	    echo ${ANSWER}
