@@ -16,5 +16,8 @@ And to run this game enter the server and type
 
 
 
-**if you Will commit to the master here it will run This Job by it self** **
+**if you Will commit to the master here it will run This Job by it self Here --> http://150.136.15.185:8080/job/PipeLine_for_world_of_gmae/** ** 
+
+**you can run pull it from docker hub at vladibelousov54/worldofgame like that ``docker pull vladibelousov54/worldofgame``***
+
 
