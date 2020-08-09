@@ -27,6 +27,7 @@ node {
 		ANSWER = sh(returnStdout: true , script: 'python e2e.py').trim()
 		if (ANSWER == 'test failed') {	
 			echo '[FAILURE] Failed to build'
+			error('Stopping early…')
             		currentBuild.result = 'FAILURE'
 			currentBuild.result = 'ABORTED'
 		} else {
